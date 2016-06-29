@@ -23,7 +23,7 @@ after_script:
 
 branches:hexo
   only:
-    - blog-source
+    -source
 env:
  global:
    - GH_REF: github.com/ajason/ajason.github.io.git
