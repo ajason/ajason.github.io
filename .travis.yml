@@ -18,7 +18,7 @@ after_script:
   - git config user.email “ajason0622@gmail.com"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${github.com/ajason/ajason.github.io.git}” :hexo
+  - git push --force --quiet "https://${travis}@${github.com/ajason/ajason.github.io.git}” :hexohexo
 # E: Build LifeCycle
 
 branches:hexo
