@@ -9,7 +9,9 @@ install:
  # - npm install -g gulp
 
 script:
+  - hexo clean
   - hexo g
+  - hexo d
 
 after_script:
   - cd ./public
@@ -18,12 +20,12 @@ after_script:
   - git config user.email “ajason0622@gmail.com"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${travis}@${github.com/ajason/ajason.github.io.git}” :hexo
+  - git push --force --quiet "https://${travis}@${GH_REF}” :hexo
 # E: Build LifeCycle
 
 branches:hexo
   only:
-    - blog-source
+    -source
 env:
  global:
    - GH_REF: github.com/ajason/ajason.github.io.git
