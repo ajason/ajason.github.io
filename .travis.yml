@@ -1,32 +1,26 @@
 language: node_js
 node_js: stable
 
-# S: Build Lifecycle
+before_install:
+- npm install -g hexo-cli # 安装 hexo
+
 install:
   - npm install
-  - npm install hexo-cli -g
-
-#before_script:
- # - npm install -g gulp
 
 script:
   - hexo clean
   - hexo g
   - hexo d
 
+after_success:
+- git config --global user.name "ajason"
+- git config --global user.email "ajason0622@gmail.com"
+- hexo deploy
+
 after_script:
-  - cd ./public
-  - git init
-  - git config user.name "ajason"
-  - git config user.email “ajason0622@gmail.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${travis}@${GH_REF}” :hexo
+
 # E: Build LifeCycle
 
-branches:hexo
+branches: hexo
   only:
-    -source
-env:
- global:
-   - GH_REF: github.com/ajason/ajason.github.io.git
+    - source
