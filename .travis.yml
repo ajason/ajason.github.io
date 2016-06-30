@@ -6,18 +6,18 @@ branches:
 cache:
   directories:
     - node_modules
-    
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_892788d8dfa1_key -iv $encrypted_892788d8dfa1_iv
   -in id_rsa.enc -out id_rsa -d
-
-# 改变文件权限
-- chmod 600 ~/.ssh/id_rsa
 
 # 配置 ssh
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
+
+# 改变文件权限
+- chmod 600 ~/.ssh/id_rsa
 
 - npm install -g hexo
 - npm install -g hexo-cli
