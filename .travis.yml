@@ -17,7 +17,7 @@ before_install:
 - cp .travis/ssh_config ~/.ssh/config
 
 # 改变文件权限
-- chmod 600 ~/.ssh/id_rsa
+#- chmod 600 ~/.ssh/id_rsa
 
 - npm install -g hexo
 - npm install -g hexo-cli
