@@ -1,34 +1,25 @@
 language: node_js
-
 node_js:
-  - "4"
-
+- '4'
 branches:
   only:
   - hexo
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_892788d8dfa1_key -iv $encrypted_892788d8dfa1_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
-# 改变文件权限
+- openssl aes-256-cbc -K $encrypted_892788d8dfa1_key -iv $encrypted_892788d8dfa1_iv -in id_rsa.enc -out id_rsa -d
+
 - chmod 600 ~/.ssh/id_rsa
 
-# 配置 ssh
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
-
-
-
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
 - git config --global user.name 'ajason'
 - git config --global user.email 'ajason0622@gmail.com'
-#- sed -i'' "/^ *repo/s~github\.com~${REPO_TOKEN}@github.com~" _config.yml
 - git clone https://github.com/iissnan/hexo-theme-next themes/next
 install:
 - npm install
@@ -36,10 +27,7 @@ install:
 script:
 - hexo clean
 - hexo generate
-#after_success:
 - hexo deploy
-
-
 env:
   global:
     secure: VW0kdYJHsJyA5F5oeiByqFFHmtp1LWMcaEooV+IWRTPBaK6n4DTYZip7TgNLC2jWlK6UA6XBeytgXx9gCQYvagBj5SAlBI+ZF6VH2ZpJl9GUY8L21RpJOKLtSr9pbIGOlsLdMe3tf8ic9N559SDpEfo/gEtCBUli1ZFm10oS+Grsda0VNASJfHizF40xzNiECPUGmkOAr5UZmHP1PqXm+ho+bA3AoPA/mj1tGFmdhFZorJj1CIUA0ASi3hceqVA/bEmYSu4fv41AaQ/xQ76O0KTawExW5OYjQI4gc9xl5BI+HzKnuYunRkzmcADBx/tVsSsTY5cswBzs33keFEdW51aSzl23YcKnSQmHYgL08oK1iqd5zsxDeJ5rX9bCkS3lkZW7JNBHvrvNhoPeRJ2zQnKlCaZjhiId47qxNpcxLKvSRWQ0f1R/ANPz/ag/7vAh+xdyqkqf9aDAtyzYB3EXNuVCdgdWIrEwcqD6+wF+fHlaj7aSYH3/dYNbr/b51pBNV9x+kfdq6uydvrmaFaqw4xNpL4PAAU7PobPBMaEW33GOrEOopyc2gk/gg/Enu5EM6skNO03Q/4vjdQHCh2PLiKLhR9L2SI4Hf6J3icNO4HdSt7RsI8dC8+mncUhHIeZzTP4f9Us+7PPRXQEnTZcsFAPRYH8qIeuHrNN+rFFJyDw=
