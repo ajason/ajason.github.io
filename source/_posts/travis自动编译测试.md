@@ -13,3 +13,4 @@ title: travis 自动编译测试
 换一种- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
 增加主题
 加空格
+权限测试

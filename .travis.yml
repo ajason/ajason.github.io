@@ -9,7 +9,7 @@ before_script:
 - git config --global user.name 'ajason'
 - git config --global user.email 'ajason0622@gmail.com'
 #- sed -i'' "s~git@github.com:git@github.com:ajason/ajason.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/git@github.com:ajason/ajason.github.io.git~"_config.yml
-- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+- sed -i'' "/^ *repo/s~github\.com~${REPO_TOKEN}@github.com~" _config.yml
 - git clone https://github.com/iissnan/hexo-theme-next themes/next
 install:
 - npm install
