@@ -4,7 +4,7 @@
 
 # Site
 title: Jason's Blog
-subtitle: Just a blog test
+subtitle: Jiong Design
 description:
 author: Jason Hsueh
 language: zh-Hans
@@ -71,3 +71,10 @@ deploy:
   type: git
   repo: git@github.com:ajason/ajason.github.io
   branch: master
+
+
+
+#duoshuopinglun
+disqus_shortname: jiongdesign.duoshuo.com
+
+google_analytics: UA-86884825-1
