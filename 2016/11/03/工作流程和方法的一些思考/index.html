@@ -1,0 +1,634 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Jiong Design" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="工作流程和方法的一些思考
+这篇文章是一篇工作中关于团队协作的总结。
+
+咕咚冰雪现在正在经历一个从0到1的过程，团队由最初的六月份组建团队，演变到现在产品、设计、iOS开发、Android 开发、后台开发、服务端开发、运营以及测试有成都团队支持的十一人团队，可以说已经是一个职能相对全面完善的团队配置了。团队虽小，五脏俱全。
+iOS 已经向 AppStore 提交了第一个版本，Android 也马上开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工作流程和方法的一些思考">
+<meta property="og:url" content="http://ajason.github.io/2016/11/03/工作流程和方法的一些思考/index.html">
+<meta property="og:site_name" content="Jason's Blog">
+<meta property="og:description" content="工作流程和方法的一些思考
+这篇文章是一篇工作中关于团队协作的总结。
+
+咕咚冰雪现在正在经历一个从0到1的过程，团队由最初的六月份组建团队，演变到现在产品、设计、iOS开发、Android 开发、后台开发、服务端开发、运营以及测试有成都团队支持的十一人团队，可以说已经是一个职能相对全面完善的团队配置了。团队虽小，五脏俱全。
+iOS 已经向 AppStore 提交了第一个版本，Android 也马上开">
+<meta property="og:updated_time" content="2016-11-27T08:02:44.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="工作流程和方法的一些思考">
+<meta name="twitter:description" content="工作流程和方法的一些思考
+这篇文章是一篇工作中关于团队协作的总结。
+
+咕咚冰雪现在正在经历一个从0到1的过程，团队由最初的六月份组建团队，演变到现在产品、设计、iOS开发、Android 开发、后台开发、服务端开发、运营以及测试有成都团队支持的十一人团队，可以说已经是一个职能相对全面完善的团队配置了。团队虽小，五脏俱全。
+iOS 已经向 AppStore 提交了第一个版本，Android 也马上开">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://ajason.github.io/2016/11/03/工作流程和方法的一些思考/"/>
+
+
+  <title> 工作流程和方法的一些思考 | Jason's Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86884825-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jason's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Jiong Design</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                工作流程和方法的一些思考
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-03T00:00:00+08:00" content="2016-11-03">
+              2016-11-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/03/工作流程和方法的一些思考/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/03/工作流程和方法的一些思考/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="工作流程和方法的一些思考"><a href="#工作流程和方法的一些思考" class="headerlink" title="工作流程和方法的一些思考"></a>工作流程和方法的一些思考</h2><blockquote>
+<p>这篇文章是一篇工作中关于团队协作的总结。</p>
+</blockquote>
+<p>咕咚冰雪现在正在经历一个从0到1的过程，团队由最初的六月份组建团队，演变到现在产品、设计、iOS开发、Android 开发、后台开发、服务端开发、运营以及测试有成都团队支持的十一人团队，可以说已经是一个职能相对全面完善的团队配置了。团队虽小，五脏俱全。</p>
+<p>iOS 已经向 AppStore 提交了第一个版本，Android 也马上开始提测，虽然我们仍在不停地做修修补补的事，但工作流程也开始逐渐趋向清晰成熟，在这里把我个人的认识分享给大家。</p>
+<p>「流程」这个词乍一听起来，容易让人联想到像是部门之间繁冗的环节，拖沓的节奏或者漫长无趣的印象，但产品一旦进入到任务繁多甚至不断累积的阶段时（比如现在的测试过程），采用正确方式方法的姿势来管理工作流程，是绝对意义上对大家效率提升的必要手段。<br><a id="more"></a><br>为了让大家的工作效率提高，减少没必要的沟通和开会，我不得不再次向大家提出工作流程的规范：</p>
+<h3 id="利用好TAPD"><a href="#利用好TAPD" class="headerlink" title="利用好TAPD"></a>利用好TAPD</h3><p>相较于 tower 的简单粗暴，TAPD 虽然刚接触起来感觉上是复杂的的系统，但使用一段时间后会发现 TAPD 系统设计的还是非常科学合理的。我们会逐渐把任务管理从 tower 转移到 TAPD 上来。</p>
+<h3 id="需求管理"><a href="#需求管理" class="headerlink" title="需求管理"></a>需求管理</h3><p>产品第一个版本，一定是我们意淫出来的产品，我们意淫了用户的需求，并且试图解决意淫出来的需求做了第一个版本的产品。或多或少，市场上大多数产品的第一个版本都是这样的。但产品一旦上线，我们就必须要从意淫转移到用户养成的观念，我们要开始真正的听取用户的声音，思考，然后改进。除此之外，产品上线也意味着要开始产品运营的工作，运营的宗旨也是「伺候好用户」。<br>所以从产品上线开始，除了改 bug 完善用户体验，会面临更多的新需求，无论是来自用户、来自运营、来自老板还是我们自己。我们需要从中甄别出真正有价值的需求。<br><strong>无论是谁，都可以在 TAPD 的「需求」模块创建新的需求</strong>，请务必清楚地描述需求。<strong>请不要随便只通过口头或在IM 中提出需求</strong>，这样提出的需求，从今开始将不再视为考虑范围。</p>
+<h3 id="迭代和排期"><a href="#迭代和排期" class="headerlink" title="迭代和排期"></a>迭代和排期</h3><p>快速迭代会是我们今后主要的工作方式，敏捷的快速迭代可以迅速对需求做出实际效果的判断。效果好，或不够好，就持续快速迭代改进优化，效果不好，就快速更换解决方案。<br>迭代会从需求池里按优先级挑选出需求做规划，所以如果你没有及时把需求添加到需求池，或者你的需求优先级不高，都只能按优先级放在之后的迭代里。</p>
+<h3 id="做专业的自己"><a href="#做专业的自己" class="headerlink" title="做专业的自己"></a>做专业的自己</h3><p>我们每个人对于团队，都有各自特殊的角色定位（比如开发、设计、运营、产品）。之所以有这样的角色，是因为你的工作不能轻易被别人替代，是因为你对于你的工作是专业的。你的工作经验，你对专业知识的掌握，以及你对专业领域的见识，决定了你在团队里专业负责特殊的工作内容。<br>我希望你被分配到需求后，以专业的态度做出专业的解决方案。<br>我希望你对自己拿不准的解决方案，能积极地分享并听取大家的反馈。<br>我希望你在对别人分配到的需求有想法建议时，及时在需求中评论出你的观点，并清楚的说明理由。<br>我希望作为专业的你，在听到别人的意见和建议时，能做出专业的判断和取舍。<br>我希望你为别人提出意见或建议后，无论被采纳还是被忽略，都拿出最基本的尊重来对待。<br>我拿一个简单粗暴的例子做比喻：团队有1个设计师，9个工程师，如果采用民主的方式做决策，设计师的审美及专业水平在团队里则变得一无是处。所以「民主」在角色各异的团队里是极不可取的决策方式，民主可以做为参考意见存在，但不能作为决策而存在。<br>之所以说到「做专业的自己」这个点，就是因为我们经常无法正确对待解决方案的决策，陷入不断的争吵甚至到破坏团队友谊。（说实话，我检讨我自己经常无法摆脱自己的意见没有被采纳后挣扎不休的情况。）所以提出「做专业的自己」，希望大家能理性对待，尊重专业的同事做出的决策。</p>
+<h3 id="不怕出错，快速迭代。"><a href="#不怕出错，快速迭代。" class="headerlink" title="不怕出错，快速迭代。"></a>不怕出错，快速迭代。</h3><p>接着上一条，决策的过程应该交给专业的人，而不是陷入不断争吵纠结的斡旋，更不是权利的暴力干涉。是决策，就需要验证效果，无论效果是好是坏，都不要埋怨，不要气馁。谁都会犯错，犯错不是什么严重的事情。不是任何人都能在决策时就能准确预测到结果的好坏。好在我们是一个敏捷的产品开发团队，最迟一个决策，两周一个版本也能快速弥补过失。</p>
+<h3 id="责任感"><a href="#责任感" class="headerlink" title="责任感"></a>责任感</h3><p>我们把决策权交给专业的你，是对你的信任，也希望你能对自己的决策有责任感。负起责任，不是你做错后大家有理由抱怨你埋怨你，不是一股脑把结果总结为幼稚的指责「是你的责任！」。负起责任是希望你在做决策时能够客观理性的做出判断，而不是被情绪干扰的结果。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>团队是新团队，磨合、磕绊都是正常的，希望大家能不吝提出自己的意见及见解，理性客观的讨论。沟通是解决问题的重要手段，如果你有不一样的看法也请回复邮件和大家讨论。<br>我之所以写这篇邮件，不是为了让大家都按照我说的做，但我的目的是引导大家讨论，以达成共识。如果大家都按照各自的行事方法，必然会激发相互之间的矛盾。所以希望大家都能各自表达，我们共同</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/18/买了个域名/" rel="next" title="买了个域名">
+                <i class="fa fa-chevron-left"></i> 买了个域名
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/05/网站优化/" rel="prev" title="网站优化">
+                网站优化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/03/工作流程和方法的一些思考/"
+           data-title="工作流程和方法的一些思考" data-url="http://ajason.github.io/2016/11/03/工作流程和方法的一些思考/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Jason Hsueh" />
+          <p class="site-author-name" itemprop="name">Jason Hsueh</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/ajason0622" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/ajason0622/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ajason622" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作流程和方法的一些思考"><span class="nav-number">1.</span> <span class="nav-text">工作流程和方法的一些思考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用好TAPD"><span class="nav-number">1.1.</span> <span class="nav-text">利用好TAPD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求管理"><span class="nav-number">1.2.</span> <span class="nav-text">需求管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代和排期"><span class="nav-number">1.3.</span> <span class="nav-text">迭代和排期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做专业的自己"><span class="nav-number">1.4.</span> <span class="nav-text">做专业的自己</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不怕出错，快速迭代。"><span class="nav-number">1.5.</span> <span class="nav-text">不怕出错，快速迭代。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#责任感"><span class="nav-number">1.6.</span> <span class="nav-text">责任感</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason Hsueh</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jiongdesign"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
